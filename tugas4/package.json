@@ -1,0 +1,26 @@
+{
+  "name": "tugas4",
+  "version": "1.0.0",
+  "description": "tugas4 fw5-javscript3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rintosaputro/fw5-javascript3.git"
+  },
+  "keywords": [
+    "tugas4"
+  ],
+  "author": "Rinto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rintosaputro/fw5-javascript3/issues"
+  },
+  "homepage": "https://github.com/rintosaputro/fw5-javascript3#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.4"
+  }
+}
