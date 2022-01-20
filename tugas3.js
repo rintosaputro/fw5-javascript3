@@ -39,11 +39,11 @@ proses('amerika') // memanggil fungsi async proses dengan parameter amerika yang
 
 
 // NO 2
-let saldo = 1000000 // deklarasi saldo
 const pembayaran = (harga) => { // inisialisasi fungsi pembayaran dengan parameter harga
     return new Promise((resolve, reject) => { // mengembalikan promise dengan parameter resolve untuk berhasil dan reject untuk error
         if(typeof(harga) === 'number') { // melakukan validasi apakah parameter harga bertipe number
             setTimeout(() => { // inisialisasi setTimeOut untuk membuat program dijalankan dalam waktu yang ditentukan di parameter ke 2 dan parameter ke 1 berisi callback function 
+                let saldo = 1000000 // deklarasi saldo
                 if(saldo >= harga) { // validasi apakah nilai saldo lebih besar dari harga
                     saldo -= harga // nilai saldo dikurangi harga
                     resolve(`Pembayaran sukses! Saldo anda saat ini ${saldo}`) // memberi niali untuk resolve 
@@ -51,6 +51,8 @@ const pembayaran = (harga) => { // inisialisasi fungsi pembayaran dengan paramet
                     reject(new Error('Maaf saldo anda kurang!')) // mencetak reject dengan pesan error
                 }
             }, 1000) // menentukan waktu tunggu dari setTimeOut yaitu 1 detik
+        } else {
+            reject(new Error('Inputan harus nomer!'))
         }
     })
 }
