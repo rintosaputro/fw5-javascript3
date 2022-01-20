@@ -3,9 +3,9 @@ const cekNegaraAsean = (negara) => { // inisialisasi fungsi chekNegaraAsean deng
     return new Promise((resolve, reject) => { // mengembalikan promise dengan parameter resolve untuk berhasil dan reject untuk error
         setTimeout(() => { // inisialisasi setTimeOut untuk membuat program dijalankan dalam waktu yang ditentukan di parameter ke 2 dan parameter ke 1 berisi callback function 
             const daftarNegara = ['Filipina', 'Indonesia', 'Malaysia', 'Singapura', 'Thailand', 'Brunei', 'Vietnam', 'Laos', 'Myanmar', 'Kamboja'] // daftarNegara yang berisi array negara asean
-            let cek = daftarNegara.find(item => item.toLowerCase() === negara.toLowerCase()) // mencari data daftarNegara dengan find dan mengembalikan item yang sama dengan negara yang keduanya diubah terlebih dahulu menjadi huruf kecil
-            if(cek) { // inisialisasi pengkondisian mengecek cek apakah true/false
-                resolve(`${cek} adalah negara ASEAN`) // jika true rosolve diisi dengan pesan cek + adalah negara ASEAN
+            let cekNegara = daftarNegara.find(item => item.toLowerCase() === negara.toLowerCase()) // mencari data daftarNegara dengan find dan mengembalikan item yang sama dengan negara yang keduanya diubah terlebih dahulu menjadi huruf kecil
+            if(cekNegara) { // inisialisasi pengkondisian mengecek cekNegara apakah true/false
+                resolve(`${cekNegara} adalah negara ASEAN`) // jika true rosolve diisi dengan pesan cekNegara + adalah negara ASEAN
             } else { // inisialisasi pengkondisian jika fals
                 reject(new Error(`${negara} bukan bagian dari ASEAN`)) // mengisi reject dengan pesan error jika false
             }
@@ -41,7 +41,7 @@ proses('amerika') // memanggil fungsi async proses dengan parameter amerika yang
 // NO 2
 let saldo = 1000000 // deklarasi saldo
 const pembayaran = (harga) => { // inisialisasi fungsi pembayaran dengan parameter harga
-    return new Promise((resolve, reject) => { // // mengembalikan promise dengan parameter resolve untuk berhasil dan reject untuk error
+    return new Promise((resolve, reject) => { // mengembalikan promise dengan parameter resolve untuk berhasil dan reject untuk error
         if(typeof(harga) === 'number') { // melakukan validasi apakah parameter harga bertipe number
             setTimeout(() => { // inisialisasi setTimeOut untuk membuat program dijalankan dalam waktu yang ditentukan di parameter ke 2 dan parameter ke 1 berisi callback function 
                 if(saldo >= harga) { // validasi apakah nilai saldo lebih besar dari harga
