@@ -6,8 +6,8 @@ fetch(url)
 .then(response => {
     return response.json()
 })
-.then(result => {
-    const name = result.map(item => item.name)
+.then(responseJson => {
+    const name = responseJson.map(item => item.name)
     console.log(name)
 })
 .catch(err => {
@@ -17,8 +17,8 @@ fetch(url)
 const daftarNama = async () => {
     try {
         const response = await fetch(url)
-        const result = await response.json()
-        const names = result.map(item => item.name)
+        const responseJson = await response.json()
+        const names = responseJson.map(item => item.name)
         console.log(names)
     } catch(err) {
         console.log(err)
