@@ -2,7 +2,7 @@ const getmonth = (callback) => { // inisialisasi fungsi getmonth dengan paramete
     setTimeout(() => { // inisialisasi setTimeOut untuk memberi waktu tertentu untuk menjalankan perintah didalam callbac functionnya
         let error = false; // inisialisasi error dengan nilai false
         let month = ['January', 'February', 'March', 'April', 'May', 'Juni', 'July', 'August', 'September', 'October', 'November', 'December'] // inisialisasi month degan tipe array
-        if(!error) { // validasi apakah error false
+        if(!error) { // validasi apakah tidak error 
             callback(null, month) // jika validasi true parameter callback akan diisi dengan null dan month
         } else { // validasi jika error true
             callback(new Error('Sorry Data Not Found'), []) // mengisi parameter callback dengan pesan error untuk parameter pertama dan array kosong untuk parameter kedua

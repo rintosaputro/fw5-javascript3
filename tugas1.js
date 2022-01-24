@@ -22,7 +22,7 @@ cekHariKerja('senin') //memanggil fungsi cekHariKerja dan memberi nilai paramete
 .catch((err) => { // inisialisasi promise reject dengan catch dengan parameter err
     console.log(err) // mencetek parameter err
 })
-// ouput => senin
+// output => senin
 
 // async await
 const proses = async (day) => { // inisialisasi fungsi async

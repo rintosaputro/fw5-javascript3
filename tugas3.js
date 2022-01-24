@@ -6,7 +6,7 @@ const cekNegaraAsean = (negara) => { // inisialisasi fungsi chekNegaraAsean deng
             let cekNegara = daftarNegara.find(item => item.toLowerCase() === negara.toLowerCase()) // mencari data daftarNegara dengan find dan mengembalikan item yang sama dengan negara yang keduanya diubah terlebih dahulu menjadi huruf kecil
             if(cekNegara) { // inisialisasi pengkondisian mengecek cekNegara apakah true/false
                 resolve(`${cekNegara} adalah negara ASEAN`) // jika true rosolve diisi dengan pesan cekNegara + adalah negara ASEAN
-            } else { // inisialisasi pengkondisian jika fals
+            } else { // inisialisasi pengkondisian jika false
                 reject(new Error(`${negara} bukan bagian dari ASEAN`)) // mengisi reject dengan pesan error jika false
             }
         }, 1000) // menentukan waktu tunggu dari setTimeOut yaitu 1 detik
@@ -46,13 +46,13 @@ const pembayaran = (harga) => { // inisialisasi fungsi pembayaran dengan paramet
                 let saldo = 1000000 // deklarasi saldo
                 if(saldo >= harga) { // validasi apakah nilai saldo lebih besar dari harga
                     saldo -= harga // nilai saldo dikurangi harga
-                    resolve(`Pembayaran sukses! Saldo anda saat ini ${saldo}`) // memberi niali untuk resolve 
+                    resolve(`Pembayaran sukses! Saldo anda saat ini ${saldo}`) // memberi nilai untuk resolve 
                 } else { // kondisi jika harga lebih besar dari saldo
                     reject(new Error('Maaf saldo anda kurang!')) // mencetak reject dengan pesan error
                 }
             }, 1000) // menentukan waktu tunggu dari setTimeOut yaitu 1 detik
-        } else {
-            reject(new Error('Inputan harus nomer!'))
+        } else { // pengkondisian jika harga bukan number
+            reject(new Error('Inputan harus nomer!')) // mengisi reject dengan pesan error
         }
     })
 }
